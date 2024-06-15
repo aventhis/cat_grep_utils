@@ -1,8 +1,8 @@
 # Projects on C
 
-Этот репозиторий содержит несколько проектов, написанных на языке программирования C. Каждый проект демонстрирует различные аспекты программирования на C, включая работу с математическими библиотеками, утилитами командной строки и многое другое.
+This repository contains several projects written in the C programming language. Each project demonstrates different aspects of C programming, including working with mathematical libraries, command-line utilities, and more.
 
-## Содержание
+## Contents
 
 1. [s21_math](#s21_math)
 2. [s21_cat](#s21_cat)
@@ -10,53 +10,54 @@
 
 ## s21_math
 
-Проект `s21_math` представляет собой реализацию собственной версии стандартной библиотеки math.h на языке C. В этой библиотеке реализованы базовые математические операции, используемые в различных алгоритмах.
+The `s21_math` project is a custom implementation of the standard math.h library in C. This library includes basic mathematical operations used in various algorithms.
 
-### Основные возможности
+### Main Features
 
-- Реализация функций математической библиотеки, таких как `sin`, `cos`, `tan`, `exp`, `log` и других.
-- Полное покрытие unit-тестами с использованием библиотеки Check.
-- Генерация отчета о покрытии кода с использованием gcov.
+- Implementation of mathematical library functions such as `sin`, `cos`, `tan`, `exp`, `log`, and others.
+- Full unit test coverage using the Check library.
+- Code coverage report generation using gcov.
 
-### Описание целей Makefile
+### Makefile Targets Description
 
-- **all**: Эта цель собирает весь проект, включая компиляцию всех исходных файлов и создание исполняемых файлов.
-- **clean**: Эта цель удаляет все сгенерированные файлы, такие как объектные файлы и исполняемые файлы, очищая проект.
-- **s21_math.a**: Эта цель создает статическую библиотеку `s21_math.a` из всех исходных файлов проекта.
-- **test**: Эта цель компилирует и запускает все unit-тесты, чтобы проверить правильность работы функций библиотеки.
-- **gcov_report**: Эта цель запускает тесты с флагами gcov и генерирует отчет о покрытии кода в виде HTML-страницы.
+- **all**: This target builds the entire project, including compiling all source files and creating executable files.
+- **clean**: This target removes all generated files, such as object files and executables, cleaning the project.
+- **s21_math.a**: This target creates the static library `s21_math.a` from all project source files.
+- **test**: This target compiles and runs all unit tests to verify the correctness of the library functions.
+- **gcov_report**: This target runs tests with gcov flags and generates a code coverage report in HTML format.
 
 ## s21_cat
 
-Проект `s21_cat` представляет собой реализацию утилиты `cat` на языке C, которая объединяет и отображает содержимое файлов.
+The `s21_cat` project is a C implementation of the `cat` utility, which concatenates and displays file contents.
 
-### Основные возможности
+### Main Features
 
-- Поддержка стандартных и дополнительных флагов, таких как `-b`, `-e`, `-n`, `-s`, `-t`.
+- Support for standard and additional flags such as `-b`, `-e`, `-n`, `-s`, `-t`.
 
-### Сборка и запуск
+### Build and Run
 
-1. Соберите проект:
+1. Build the project:
    ```sh
    make all
-2. Заупстите утлиту:
+
+2. Run the utility:
     ```sh
     ./s21_cat [OPTION] [FILE]...
 
 ## s21_grep
 
-Проект `s21_grep` представляет собой реализацию утилиты `grep` на языке C, которая выполняет поиск шаблонов в файлах.
+The `s21_grep` project is a C implementation of the `grep` utility, which searches for patterns within files.
 
-### Основные возможности
+### Main Features
 
-- Поддержка флагов `-e`, `-i`, `-v`, `-c`, `-l`, `-n` и других.
+- Support for flags `-e`, `-i`, `-v`, `-c`, `-l`, `-n`, and others.
 
-### Сборка и запуск
+### Build and Run
 
-1. Соберите проект:
+1. Build the project:
    ```sh
    make all
-2. Заупстите утлиту:
+2. Run the utility:
     ```sh
     ./s21_grep [OPTION] [PATTERN] [FILE]...
 
