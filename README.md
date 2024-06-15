@@ -40,7 +40,8 @@
    ```sh
    make all
 2. Заупстите утлиту:
-   ./s21_cat [OPTION] [FILE]...
+    ```sh
+    ./s21_cat [OPTION] [FILE]...
 
 ## s21_grep
 
