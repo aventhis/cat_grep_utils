@@ -1,65 +1,65 @@
 # cat_grep_utils
 
-Этот проект содержит две утилиты командной строки, написанные на языке C: `cat` и `grep`.
+This project contains two command-line utilities written in C: `cat` and `grep`.
 
-- Все программы размещены в папках `src/cat/` и `src/grep/`
+- All programs are located in the `src/cat/` and `src/grep/` folders.
 
-## Сборка
+## Build
 
-1. Запустите `make`, чтобы собрать проект в папках `src/cat/` и `src/grep/`.
+1. Run `make` to build the project in the `src/cat/` and `src/grep/` folders.
 
-## Общие требования
+## General Requirements
 
-- Код написан на C11 с использованием компилятора gcc.
-- Использованы стандарты POSIX.1-2017 и Google Style Guide.
-- Созданы исполняемые файлы, которые принимают аргументы командной строки.
-- Сборка программ осуществляется с помощью Makefile с основными целями: `s21_cat` и `s21_grep`.
-- Проведены интеграционные тесты, покрывающие все флаги и входные значения, с проверкой поведения в сравнении с реальными утилитами Bash.
-- Принципы структурного программирования соблюдены, исключено дублирование кода, использованы общие модули.
+- The code is written in C11 using the gcc compiler.
+- POSIX.1-2017 and Google Style Guide standards were used.
+- Executable files were created, which accept command-line arguments.
+- The programs are built using a Makefile with the main targets: `s21_cat` and `s21_grep`.
+- Integration tests covering all flags and input values were conducted, comparing behavior with real Bash utilities.
+- Principles of structured programming were followed, code duplication was eliminated, and common modules were used.
 
-## Утилита `cat`
+## Utility `cat`
 
 `cat [OPTION] [FILE]...`
 
-### cat Опции
+### cat Options
 
-| № | Опции | Описание |
-| ------ | ------ | ------ |
-| 1 | -b (GNU: --number-nonblank) | нумерует только непустые строки |
-| 2 | -e предполагает и -v (GNU only: -E то же самое, но без применения -v) | также отображает символы конца строки как $  |
-| 3 | -n (GNU: --number) | нумерует все выходные строки |
-| 4 | -s (GNU: --squeeze-blank) | сжимает несколько смежных пустых строк |
-| 5 | -t предполагает и -v (GNU: -T то же самое, но без применения -v) | также отображает табы как ^I |
+| No. | Options | Description |
+| --- | ------- | ----------- |
+| 1 | -b (GNU: --number-nonblank) | numbers only non-blank lines |
+| 2 | -e implies -v (GNU only: -E same as -e but without applying -v) | also displays end-of-line characters as $ |
+| 3 | -n (GNU: --number) | numbers all output lines |
+| 4 | -s (GNU: --squeeze-blank) | suppresses repeated empty lines |
+| 5 | -t implies -v (GNU: -T same as -t but without applying -v) | also displays tabs as ^I |
 
-- Поддерживает флаги (включая GNU версии):`-b`, `-e`, `-n`, `-s`, `-t`, `-v`
-- Исходные и заголовочные файлы расположены в директории `src/cat/`.
-- Исполняемый файл находится в `src/cat/` и называется `s21_cat`.
+- Supports flags (including GNU versions): `-b`, `-e`, `-n`, `-s`, `-t`, `-v`
+- Source and header files are located in the `src/cat/` directory.
+- The executable file is located in `src/cat/` and is called `s21_cat`.
 
-## Утилита `grep`
+## Utility `grep`
 
 `grep [options] template [file_name]`
 
-### grep Опции
+### grep Options
 
-| № | Опции | Описание |
-| ------ | ------ | ------ |
-| 1 | -e | Шаблон |
-| 2 | -i | Игнорирует различия регистра.  |
-| 3 | -v | Инвертирует смысл поиска соответствий. |
-| 4 | -c | Выводит только количество совпадающих строк. |
-| 5 | -l | Выводит только совпадающие файлы.  |
-| 6 | -n | Предваряет каждую строку вывода номером строки из файла ввода. |
-| 7 | -h | Выводит совпадающие строки, не предваряя их именами файлов. |
-| 8 | -s | Подавляет сообщения об ошибках о несуществующих или нечитаемых файлах. |
-| 9 | -f file | Получает регулярные выражения из файла. |
-| 10 | -o | Печатает только совпадающие (непустые) части совпавшей строки. |
+| No. | Options | Description |
+| --- | ------- | ----------- |
+| 1 | -e | Pattern |
+| 2 | -i | Ignores case differences. |
+| 3 | -v | Inverts the sense of matching. |
+| 4 | -c | Displays only the count of matching lines. |
+| 5 | -l | Displays only matching files. |
+| 6 | -n | Prefixes each output line with the line number from the input file. |
+| 7 | -h | Displays matching lines without prepending file names. |
+| 8 | -s | Suppresses error messages about nonexistent or unreadable files. |
+| 9 | -f file | Takes patterns from the file. |
+| 10 | -o | Prints only the matching (non-empty) parts of matching lines. |
 
-- Поддерживает флаги: `-e`, `-i`, `-v`, `-c`, `-l`, `-n`.
-- Для регулярных выражений используйте библиотеки `pcre` или `regex`.
-- Исходные и заголовочные файлы расположены в директории `src/grep/`.
-- Исполняемый файл находится в `src/grep/` и называется `s21_grep`.
+- Supports flags: `-e`, `-i`, `-v`, `-c`, `-l`, `-n`.
+- Use the `pcre` or `regex` libraries for regular expressions.
+- Source and header files are located in the `src/grep/` directory.
+- The executable file is located in `src/grep/` and is called `s21_grep`.
 
-### Дополнительные задания
+### Additional Tasks
 
-- Реализованы дополнительные флаги `grep`: `-h`, `-s`, `-f`, `-o`.
-- Реализованы комбинации флагов `grep`, таких как `-iv`, `-in`.
+- Additional `grep` flags have been implemented: `-h`, `-s`, `-f`, `-o`.
+- Combinations of `grep` flags have been implemented, such as `-iv`, `-in`.
