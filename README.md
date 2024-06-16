@@ -5,7 +5,7 @@ This repository contains several projects written in the C programming language.
 ## Contents
 
 1. [s21_math](#s21_math)
-2. [s21_string+](#s21_string)
+2. [s21_string](#s21_string)
 2. [s21_cat](#s21_cat)
 3. [s21_grep](#s21_grep)
 
