@@ -5,6 +5,7 @@ This repository contains several projects written in the C programming language.
 ## Contents
 
 1. [s21_math](#s21_math)
+2. [s21_string+](#s21_string)
 2. [s21_cat](#s21_cat)
 3. [s21_grep](#s21_grep)
 
@@ -23,6 +24,24 @@ The `s21_math` project is a custom implementation of the standard math.h library
 - **all**: This target builds the entire project, including compiling all source files and creating executable files.
 - **clean**: This target removes all generated files, such as object files and executables, cleaning the project.
 - **s21_math.a**: This target creates the static library `s21_math.a` from all project source files.
+- **test**: This target compiles and runs all unit tests to verify the correctness of the library functions.
+- **gcov_report**: This target runs tests with gcov flags and generates a code coverage report in HTML format.
+
+## s21_string+
+
+Implementation of the string.h library with enhancements.
+
+### Main Features
+
+- Implementation of the string.h library functions such as `memchr`, `memcmp`, `memcpy`, `memset`, `strncat`, `strchr`, `strncmp`, `strncpy`, `strcspn`, `strerror`, `strlen`, `strpbrk`, `strrchr`, `strstr`, `strtok`.
+- Special string handling functions such as `to_upper`, `to_lower`, `insert`, `trim`.
+- Full unit test coverage using the Check library.
+
+### Makefile Targets Description
+
+- **all**: This target builds the entire project, including compiling all source files and creating executables.
+- **clean**: This target removes all generated files, such as object files and executables, cleaning the project.
+- **s21_string.a**: This target creates the static library `s21_string.a` from all project source files.
 - **test**: This target compiles and runs all unit tests to verify the correctness of the library functions.
 - **gcov_report**: This target runs tests with gcov flags and generates a code coverage report in HTML format.
 
