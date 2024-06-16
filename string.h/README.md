@@ -1,4 +1,4 @@
-# s21_string+
+# string.h
 
 Implementation of the string.h library with enhancements.
 
